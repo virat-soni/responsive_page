@@ -1,0 +1,65 @@
+
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Responsive-Page</title>
+ <style>
+   *{
+      margin: 0;padding: 0;box-sizing: border-box;font-family: cursive;
+   }
+   .container{
+      display: grid;
+      height: 100vh;
+      color: white;
+      text-transform: uppercase;
+      grid-template-columns:1fr 1fr 1fr 1fr ;
+      grid-template-rows: 0.4fr 1.5fr 1.3fr 0.8fr; 
+      grid-template-areas: "navbar navbar navbar navbar"
+                            "sidebar main main main"
+                            "sidebar box1 box2 box3"
+                            "sidebar footer footer footer"   ;
+      grid-gap:0.2rem ;        
+      text-align: center;
+
+
+   }
+   nav{background-color: green;
+   grid-area:navbar;}
+   main{background-color: #92ae10;
+   grid-area: main;}
+   .sidebar{background-color: #963258;
+   grid-area: sidebar;}
+   .box1{background-color: #457844;
+   grid-area: box1;}
+   .box2{background-color: #125554;
+      grid-area: box2}
+   .box3{background-color: #456123;
+      grid-area: box3}
+   footer{background-color: #745812;
+      grid-area: footer;}
+
+   @media only screen and (max-width:600px) {
+      .container{
+         grid-template-columns: 1fr;
+         grid-template-rows: 0.2fr 2fr 0.2fr 1.2fr 1.2fr 1.2fr 1fr;
+         grid-template-areas: "navbar" "main" "sidebar" "box1" "box2" "box3" "footer";
+      }
+   }   
+   main{
+      
+   }
+ </style>
+</head>
+<body><div class="container">
+          <nav>Navbar</nav>
+          <main>Main</main>
+          <div class="sidebar">sidebar</div>
+          <div class="Box1">Box1</div>
+          <div class="Box2">Box2</div>
+          <div class="Box3">Box3</div>
+          <footer>Footer</footer>
+      </div>
+</body>
+</html>
