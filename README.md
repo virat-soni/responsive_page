@@ -1,2 +1,1 @@
-# responsive_page
-this html and css page is fully responsive 
+https://virat-soni.github.io/responsive_page/
